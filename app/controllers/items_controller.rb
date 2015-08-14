@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
     @item.save
+    redirect_to items_path
   end
 
   private
