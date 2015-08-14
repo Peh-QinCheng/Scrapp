@@ -1,23 +1,28 @@
-## Overview
-SCRAPP
+== README
 
-## Quick Start
-Clone the repo and bundle
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-    git clone git@github.com:tinkerbox/hace.git
-    cd hace
-    bundle install
+Things you may want to cover:
 
-## Branch Policy
+* Ruby version
 
-- `master` is the active deployment branch
-- 'development' is the active development branch
+* System dependencies
 
-Local development branch naming:
+* Configuration
 
-- `feature/<branch_name>` for subtantial new feature or function
-- `enhance/<branch_name>` for minor feature or function enhancement
-- `bugfix/<branch_name>` for bug fixes
+* Database creation
 
-After done with local development, push it:
-```git push -u origin <local_branch>```
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
