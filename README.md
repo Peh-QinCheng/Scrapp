@@ -4,8 +4,8 @@ SCRAPP
 ## Quick Start
 Clone the repo and bundle
 
-    git clone git@github.com:tinkerbox/hace.git
-    cd hace
+    git clone git@github.com:tinkerbox/Scrapp.git
+    cd Scrapp
     bundle install
 
 ## Branch Policy
