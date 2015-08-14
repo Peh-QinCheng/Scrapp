@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-sm-4.col-sm-offset-4
+      .panel.panel-default
+        .panel-body
+
+          = simple_form_for @item do |f|
+            
+            = f.input :name
+
+            = f.input :price
+
+            = f.input :description
+
+            = f.submit 'Submit', class: 'btn btn-default'
