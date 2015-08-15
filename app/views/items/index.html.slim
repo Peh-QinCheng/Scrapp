@@ -1,18 +1,21 @@
 .container
   .row
     .col-sm-4.col-sm-offset-4.text-center
-      = link_to "New Item", new_item_path, class: "btn btn-default"
+      = link_to "Click here to add new Item", new_item_path, class: "btn btn-default"
 
   .row
     - @items.each do |i|
       .panel
         .panel-body
-          .col-sm-4
+          .col-sm-3
+            h3 Email
+            h4 = i.email
+          .col-sm-3
             h3 Product Name
             h4 = i.name
-          .col-sm-4
+          .col-sm-3
             h3 Price
             h4 = i.price
-          .col-sm-4  
+          .col-sm-3  
             h3 Description
             h4 = i.description

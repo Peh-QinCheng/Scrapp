@@ -1,15 +1,17 @@
 .container
   .row
-    .col-sm-4.col-sm-offset-4
+    .col-sm-6.col-sm-offset-3
       .panel.panel-default
-        .panel-body
+        .panel-body.text-center
 
           = simple_form_for @item do |f|
+
+            = f.input :email
             
             = f.input :name
 
             = f.input :price
 
-            = f.input :description
+            = f.input :description, :input_html => { :cols => 50, rows: 5 }
 
             = f.submit 'Submit', class: 'btn btn-default'
