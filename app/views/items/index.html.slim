@@ -4,18 +4,23 @@
       = link_to "Click here to add new Item", new_item_path, class: "btn btn-default"
 
   .row
+    .col-sm-3
+      h3 Email
+    .col-sm-3
+      h3 Product Name
+    .col-sm-3
+      h3 Price
+    .col-sm-3
+      h3 Description
+  .row
     - @items.each do |i|
       .panel
         .panel-body
           .col-sm-3
-            h3 Email
             h4 = i.email
           .col-sm-3
-            h3 Product Name
             h4 = i.name
           .col-sm-3
-            h3 Price
             h4 = i.price
           .col-sm-3  
-            h3 Description
             h4 = i.description
