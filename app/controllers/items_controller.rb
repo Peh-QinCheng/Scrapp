@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :item_params
 
   def index
-    @items = Item.all
+    @items = Item.where(deal: false)
   end
 
   def new
@@ -14,6 +14,12 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:item])
     @item.save
     redirect_to items_path
+  end
+
+  def close_deal
+    @item = Item.find(params[:id])
+    @item.update_attribute(:deal, true)
+    redirect_to root_path
   end
 
   private
