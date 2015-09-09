@@ -1,17 +1,70 @@
-.panel {
-  margin: 20px 0;
-}
+.items {
+	
+	&.index {
+		.item-button {
+			margin: 30px 0;
+		}
 
-.container {
-  margin: 20px 0;
-}
+		.jumbotron {
+			background-image: image-url('scrapyard.jpeg');
+    	background-size: cover;
+    	background-position: bottom 36% center;
+    	overflow: hidden;
+			color: white;
+			height: 480px;
 
-.panel-body {
-  label {
-    display: block;
-  }
- }
- 
- .btn-approve {
-  margin-top: 30px;
- } 
+			p {
+				font-size: 18px;
+			}
+		}
+
+		.panel {
+			overflow: hidden;
+			border: 0px;
+			box-shadow: 2px 2px 2px -2px gray;
+		}
+
+		.panel-body {
+			padding: 0;
+
+			.product-image {
+				width: 100%;
+				height: 240px;
+			}
+
+			.product-name { font-weight: bold; }
+
+			.info-box {
+				padding: 10px 0;
+			}
+		}
+
+		.buttons {
+			border-top: 1px solid #ECECEA;
+
+			.btn-left {
+				&:hover {
+					background-color: #FAFAFA;
+				}
+				border-right: 1px solid #ECECEA;
+				padding-right: 0;
+			}
+
+			.btn-right {
+				&:hover {
+					background-color: #FAFAFA;
+				}
+				padding-left: 0;
+			}
+		}
+	}
+
+	&.new {
+		label {
+			display: block;
+		}
+
+		textarea { width: 100%; }
+
+	}
+}
