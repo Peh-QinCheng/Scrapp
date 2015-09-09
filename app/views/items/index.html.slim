@@ -1,23 +1,24 @@
-.container
-  .row
-    .col-sm-4.col-sm-offset-4.text-center
-      = link_to "Click here to add new Item", new_item_path, class: "btn btn-default"
+.jumbotron
+  .col-sm-offset-1.col-sm-4
+    h1 ScrApp
+    h3 SUTD'S digital scrapyard
+    p Sell your pre-loved items in 30 seconds, and enjoy shopping in our unique community now!
+    = link_to "Add new Item", new_item_path, class: "btn item-button btn-green btn-lg"
 
-  .row.text-center
+.container
+
+  .row
     - @items.each do |item|
-      .panel
-        .panel-body
-          .col-sm-3
-            h3 Email
-            h4 = item.email
-          .col-sm-3
-            h3 Product Name
-            h4 = item.name
-          .col-sm-1
-            h3 Price
-            h4 = item.price
-          .col-sm-3  
-            h3 Description
-            h4 = item.description
-          .col-sm-2
-             = link_to "Done Deal", close_deal_item_path(item), method: :patch, data: { confirm: 'Choosing to continue means removing this listing from the list.', commit: 'Yes', cancel: 'No' }, class: 'btn btn-approve btn-default'
+      .col-md-3.col-sm-6
+        .panel.panel-default
+          .panel-body
+            = image_tag item.picture.url, class: "product-image"
+            .info-box.text-center.row
+              .col-sm-12.product-name = item.name
+              .col-sm-12 = "$" + item.price.to_s
+            .buttons.row.text-center
+              .col-sm-6.btn-left
+                = link_to "See more", item_path(item), class: "btn"
+              .col-sm-6.btn-right
+                = link_to "Done Deal", close_deal_item_path(item), method: :patch, data: { confirm: 'Choosing to continue means removing this listing from the list.', commit: 'Yes', cancel: 'No' }, class: 'btn btn-approve'
+                
