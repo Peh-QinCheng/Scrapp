@@ -21,6 +21,10 @@ gem 'binding_of_caller'
 gem 'pry-remote'
 gem 'better_errors'
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
+gem 'carrierwave'
+gem 'fog'
+gem 'dotenv-rails'
+gem 'mini_magick'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
