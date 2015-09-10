@@ -1,9 +1,10 @@
 .jumbotron
+  = render 'layouts/header'
   .col-sm-offset-1.col-sm-4
     h1 ScrApp
     h3 SUTD'S digital scrapyard
     p Sell your pre-loved items in 30 seconds, and enjoy shopping in our unique community now!
-    = link_to "Add new Item", new_item_path, class: "btn item-button btn-green btn-lg"
+    = link_to "Add new Item", new_item_path, class: "btn item-button btn-orange btn-lg"
 
 .container
 
@@ -17,8 +18,8 @@
               .col-sm-12.product-name = item.name
               .col-sm-12 = "$" + item.price.to_s
             .buttons.row.text-center
-              .col-sm-6.btn-left
-                = link_to "See more", item_path(item), class: "btn"
-              .col-sm-6.btn-right
+              .col-xs-6.btn-left
+                = link_to "See more", item_path(item), remote: true, class: "btn"
+              .col-xs-6.btn-right
                 = link_to "Done Deal", close_deal_item_path(item), method: :patch, data: { confirm: 'Choosing to continue means removing this listing from the list.', commit: 'Yes', cancel: 'No' }, class: 'btn btn-approve'
                 
