@@ -7,13 +7,14 @@
           = simple_form_for @item do |f|
 
             = f.input :email
-            
-            = f.input :name
+
+            = f.label "Product Name"
+            = f.input :name, label: false
 
             = f.input :price
             
             = f.input :description, :input_html => { rows: 5 }
-            = image_tag @item.picture.url, id: 'product_photo', class: 'center-block profile_image'
-            = f.input :picture, as: :file, label: false, class: 'form-group upload', input_html:{ data: { target: '#product_photo' }, accept: "image/*" }
+            = image_tag @item.picture.url, id: 'product_photo', class: 'center-block display-image'
+            = f.input :picture, as: :file, label: false, input_html:{ data: { target: '#product_photo' }, accept: "image/*" }
 
             = f.submit 'Submit', class: 'btn btn-default'
