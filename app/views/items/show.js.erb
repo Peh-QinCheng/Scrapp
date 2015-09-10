@@ -1,0 +1,5 @@
+$('content').html("<%= j render(partial: 'show')%>")
+$('#modal-form .modal-title').html("<%= j yield :header %>")
+$('#modal-form .modal-body').html("<%= j yield :body %>")
+$('#modal-form .modal-footer').html("<%= j yield :footer %>")
+$('#modal-form').modal('show')

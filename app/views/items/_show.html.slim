@@ -1,0 +1,14 @@
+= content_for :header do
+	= "Product Details"
+
+= content_for :body do
+	h4 = @item.name
+	strong Price
+	p = "$" + @item.price.to_s
+	strong Description
+	p = @item.description
+	strong Contact email
+	p = @item.email
+
+= content_for :footer do
+	button.btn.btn-orange data-dismiss="modal" type="button"  Close
