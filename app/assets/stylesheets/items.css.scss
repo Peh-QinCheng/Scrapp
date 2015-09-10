@@ -12,6 +12,7 @@
     	overflow: hidden;
 			color: white;
 			height: 480px;
+			padding-top: 0;
 
 			p {
 				font-size: 18px;
@@ -20,8 +21,8 @@
 
 		.panel {
 			overflow: hidden;
-			border: 0px;
-			box-shadow: 2px 2px 2px -2px gray;
+			border: 0;
+			box-shadow: 2px 2px 2px -2px #C0C0C0;
 		}
 
 		.panel-body {
@@ -60,11 +61,21 @@
 	}
 
 	&.new {
+
+		.panel {
+			margin-top: 36px;
+		}
+
 		label {
 			display: block;
 		}
 
 		textarea { width: 100%; }
+
+		.display-image {
+			height: 230px;
+			width: 180px;
+		}
 
 	}
 }
