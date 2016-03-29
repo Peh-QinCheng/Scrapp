@@ -4,7 +4,7 @@ SCRAPP
 ## Quick Start
 Clone the repo and bundle
 
-    git clone git@github.com:tinkerbox/Scrapp.git
+    git clone git@github.com:Peh-QinCheng/Scrapp.git
     cd Scrapp
     bundle install
 
