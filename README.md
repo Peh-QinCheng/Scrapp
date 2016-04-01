@@ -21,12 +21,3 @@ Local development branch naming:
 
 After done with local development, push it:
 ```git push -u origin <local_branch>```
-<style>
-body {
-    background-color: linen;
-}
-
-h1 {
-    color: black;
-} 
-</style>
